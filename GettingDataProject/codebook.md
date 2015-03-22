@@ -6,22 +6,28 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 Data used for this project are found here: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
+The original dataset contained samples from an experiment involving 30 volunteers. Each person performed a variety of different activities (six in all - see activityLabel below) wearing a Samsung Galaxy III smartphone on their waist. Accelerometer and gyroscope measurements were taken. This tidy data takes the means and sample deviations of that data.
+
 
 **Requirements**
 
-The data must be unpacked into a directory called UCI HAR Dataset. The tidydata.csv will be placed in the working directory. The dplyr package must be installed.
+The data must be unpacked into a directory called UCI HAR Dataset. The tidydata.csv will be placed in the working directory. The dplyr package must be installed. Then the program "run_analysis.R" can be run from within the R runtime environment.
 
 
 **Data Changes**
 
-The actual data content has not been altered. Information from both training and testing data set have been combined, along with activity information, and the mean and standard deviation have been extracted. Column names have been renamed for clarity purposes (see below).
+The actual data content has not been altered. Information from both training and testing data set have been combined, along with descriptive activity information, and the mean and standard deviation have been extracted. Column names have been renamed for clarity purposes (see below).
 
 
 
 **Variables**
 
+Unless it is stated otherwise, all the features represented as numeric type are supposed to be double-precision floating point number in a normalized range of [-1, 1].
+
+
 - subject (number of subject, from 1-30)
-- activityLabel (one of six possible activities)
+- activityLabel (factor: one of the following: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
+
 - tBody_Acc_Mean_X
 - tBody_Acc_Mean_Y
 - tBody_Acc_Mean_Z
